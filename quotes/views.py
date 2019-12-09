@@ -9,7 +9,6 @@ def home(request):
 
     if request.method == 'POST':
         ticker = request.POST['ticker']
-        # pk_61abfb62b0bf4cf7abe50f91a14fbd37  - iex cloud public key
         api_request = requests.get("https://cloud.iexapis.com/stable/stock/" + ticker + "/quote?token=pk_61abfb62b0bf4cf7abe50f91a14fbd37")
         
         try:
